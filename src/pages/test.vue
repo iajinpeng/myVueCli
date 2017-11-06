@@ -33,6 +33,10 @@
 		</ul>
         <Provincecity v-model="cur_provin"></Provincecity>
         <h1>cur: {{cur_provin}}</h1>
+        <form action="">
+            <input type="text" required>
+            <button type="submit">提交</button>
+        </form>
 	</div>
 
 </template>

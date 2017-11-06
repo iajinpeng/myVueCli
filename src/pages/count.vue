@@ -55,6 +55,43 @@
 		mounted(){
 			console.log(this.$store.state.count);
 			this.$store.dispatch('editMsg', '第一条信息');
+
+            (function () {  //一道面试题
+	            const asteData = [
+		            'path1/path2/file1',
+		            'path1/path3/file2',
+		            'path1000/file3',
+		            'path1/path2/path4/file3',
+		            'path2',
+	            ];
+	            console.log(ParseData(asteData));
+
+	            function ParseData(data) {
+		            var mapPaths = {};
+		            var afterParse = [];
+		            data.forEach(function (item) {
+			            parseDataLoop(afterParse, item.split('/'), '');
+		            });
+		            return afterParse;
+
+		            function parseDataLoop(data, paths, pre) {
+			            if(!paths.length) return;
+			            var root = paths.shift();
+			            var path = pre + '/' + root;
+			            var child;
+			            if(!mapPaths.hasOwnProperty(paths)){
+				            child = { name: root, children: []};
+				            mapPaths[path] = child;
+				            data.push(child);
+			            }else{
+				            child = mapPaths[path];
+			            }
+			            parseDataLoop(child.children, paths, path);
+		            }
+	            }
+            })()
+
+
 		}
 	}
 </script>
