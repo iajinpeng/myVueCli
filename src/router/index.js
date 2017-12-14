@@ -10,6 +10,7 @@ import Swiper from '@/pages/swipe';
 import Count from '@/pages/count.vue';
 import Count2 from '@/pages/count2.vue';
 import Cut from '@/pages/cut.vue';
+import Copyboard from '@/pages/clipboard.vue'
 
 
 Vue.use(Router)
@@ -58,6 +59,11 @@ const routes = [
 		path: '/cut',
 		name: 'cut',
 		component: Cut
+	},
+	{
+		path: '/copy',
+		name: 'copy',
+		component: Copyboard
 	},
 ]
 export default new Router({

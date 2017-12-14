@@ -23,6 +23,8 @@
 		<br>
 		<a href="javascript:alert('清除成功');">清除缓存</a>
 		<!--<div style="width: 100px;height: 100px;background: #3dffb7" draggable="true"></div>-->
+
+		
 	</div>
 </template>
 
@@ -50,7 +52,8 @@
 				'add',
 				'reduce',
 				'editMsg'
-			])
+			]),
+		
 		},
 		mounted(){
 			console.log(this.$store.state.count);
