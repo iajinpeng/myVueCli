@@ -1,7 +1,6 @@
 <template>
     <div>
         <Cascader :data="province" v-model="CurValue"></Cascader>
-
     </div>
 </template>
 

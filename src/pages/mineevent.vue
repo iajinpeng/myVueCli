@@ -1,7 +1,8 @@
 <template>
 	<div>
 		<h1>{{msg}}</h1>
-		<my-event @myMethod="whatEver" desc="呵呵:"></my-event>
+		<h2>{{foo}}</h2>
+		<my-event @myMethod="whatEver" desc="呵呵:" name="金鹏" :foo.sync="foo"></my-event>
 	</div>
 
 </template>
@@ -12,7 +13,8 @@
 		name: 'mEvt',
 		data(){
 			return {
-				msg: '哈哈'
+				msg: '哈哈',
+				foo: '黄鹤老板',
 			}
 		},
 		methods: {
